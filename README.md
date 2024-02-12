@@ -2,6 +2,15 @@
 
 This is a browser extension for Chrome that allows opening a custom HTML file as your new tab / startup page.
 
+## Contents
+- [Purpose](#purpose)
+- [Customization](#customization)
+- [Compatibility](#compatibility)
+- [Installation](#installation)
+- [Author](#author)
+- [Project](#project)
+- [Credits](#credits)
+
 ## Purpose
 I like to open a custom locally stored homepage when opening new browser tabs, instead of hitting a server every time, 
 
