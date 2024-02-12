@@ -28,8 +28,7 @@ Should work on recent versions of Chrome & Brave Browsers.
 - Matt Fields - hello@mattfields.dev
 
 ## Project
-- https://github.com/fieldse/chrome-extension-new-tab-homepage
-
+- https://github.com/fieldse/custom-chrome-new-tab-page
 
 ## Credits
 Credit for this solution to [this answer](https://superuser.com/a/909595) at Stack Exchange
