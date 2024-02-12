@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  margin: 3rem 0 2rem;;
+  margin: 4rem 0 3rem;;
 }
 h2 {
   margin: 2.5em 0 1rem;;
@@ -28,25 +28,8 @@ h2 {
   min-height:100svh;
 }
 
-.text-center {
-  text-align: center;
-}
 
-div, p {
-  margin: 1rem 0;
-  padding: 0.5rem;
-}
-
-.nobullets {
-  list-style: none;
-}
-
-.space-vertical {
-  margin-top: 2rem;
-  margin-bottom: 2.5rem;
-}
-
-/* Footer - align bottom */
+/* Footer */
 #flex-container > footer {
   margin-top:auto;
   color: white;
@@ -55,9 +38,40 @@ div, p {
   text-align: center;
 }
 
+/* Alignment */
+.text-center {
+  text-align: center;
+}
+
+
+/* Paragraph / Div margins */
+div, p {
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+
+
+/* Lists */
+.nobullets {
+  list-style: none;
+}
+
 ul li {
   margin: 0.5rem 0;
 }
+
+/* Links */
+a, a:visited, a:hover, a:active {
+  color: #256cce;
+  text-decoration: none;
+}
+
+/* Spacing */
+.space-vertical {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
 
 /* Font sizes */
 .text-huge {
