@@ -1,0 +1,39 @@
+#flex-container {
+  display:flex;
+  flex-direction:column;
+
+  /* fallback height */
+  min-height:100vh;
+
+  /* new small viewport height for modern browsers */
+  min-height:100svh;
+}
+
+.center {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div, p {
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+
+.nobullets {
+  list-style: none;
+}
+
+.space-vertical {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Footer - align bottom */
+#flex-container > footer {
+  margin-top:auto;
+}
+
+ul li {
+  margin: 0.5rem 0;
+}
