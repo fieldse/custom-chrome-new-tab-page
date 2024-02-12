@@ -1,3 +1,22 @@
+/* Body font */
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 1.5rem 0 1rem;
+}
+
+h1 {
+  margin: 3rem 0 2rem;;
+}
+h2 {
+  margin: 2.5em 0 1rem;;
+}
+
+/* Main container */
 #flex-container {
   display:flex;
   flex-direction:column;
@@ -9,10 +28,8 @@
   min-height:100svh;
 }
 
-.center {
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
+.text-center {
+  text-align: center;
 }
 
 div, p {
@@ -32,8 +49,32 @@ div, p {
 /* Footer - align bottom */
 #flex-container > footer {
   margin-top:auto;
+  color: white;
+  background-color: #444444;
+  height: 5rem;
+  text-align: center;
 }
 
 ul li {
   margin: 0.5rem 0;
+}
+
+/* Font sizes */
+.text-huge {
+  font-size: x-large;
+}
+.text-large {
+  font-size: large;
+}
+.text-larger {
+  font-size: larger;
+}
+.text-small {
+  font-size: small;
+}
+.text-smaller {
+  font-size: smaller;
+}
+.text-tiny {
+  font-size: x-small;
 }
