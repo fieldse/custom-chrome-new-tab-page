@@ -4,14 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <script src="search.js"></script>
   <title>New Tab Homepage</title>
 </head>
 <body>
   <div id="flex-container">
     <h1 class="text-center">Welcome to your example homepage!</h1>
+
+    <div id="search-form">
+      <form>
+        <input type="text" name="search-form" placeholder="Search..."/>
+        <button type="submit" id="search-btn">Search</button>
+      </form>
+    </div>
     
     <div class="space-vertical">
-      
       <p>My top links:</p>
       <ul class="nobullets">
         <li><a href="https://duckduckgo.com">DuckDuckGo</a></li>
@@ -28,5 +35,8 @@
       <span class="text-center text-small">Project: https://github.com/fieldse/custom-chrome-new-tab-page</span>
     </footer>
   </div>
+  <script type="text/javascript">
+    window.addEventListener('load', () => addListeners());
+  </script>
 </body>
 </html>
