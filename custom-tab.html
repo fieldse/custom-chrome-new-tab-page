@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- not working CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: gap: https://cdn.tailwindcss.com 'unsafe-eval' 'wasm-unsafe-eval' 'inline-speculation-rules';"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/search.js"></script>

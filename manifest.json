@@ -6,5 +6,12 @@
   "chrome_url_overrides": {
     "newtab": "custom-tab.html"
   },
+  "content_scripts": [
+    {
+      "matches": ["https://cdn.tailwindcss.com/*"],
+      "css": ["css/style.css"],
+      "js": ["js/search.js"]
+    }
+  ],
   "manifest_version": 3
 }
