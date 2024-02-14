@@ -570,6 +570,10 @@ video {
   margin-top: 5rem;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .inline {
   display: inline;
 }

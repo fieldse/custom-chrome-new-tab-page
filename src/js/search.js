@@ -39,7 +39,9 @@ function debugLogInput() {
 function addListeners() {
   document.querySelector("#search-form").addEventListener("submit", (event) => {
     event.preventDefault();
-    debugLogInput();
-    // search();
+    search();
   });
 }
+
+// Add listeners on page load
+window.onload = () => addListeners();
