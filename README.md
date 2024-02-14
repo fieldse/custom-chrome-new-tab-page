@@ -1,13 +1,17 @@
 # Chrome Local HTML file Homepage
 
-This is a browser extension for Chrome that allows opening a custom HTML file as your new tab / startup page.
+A browser extension for Chrome that allows opening a custom HTML file as your new tab / startup page.
+
+![](img/screenshot.png)
 
 ## Contents
 
 - [Purpose](#purpose)
 - [Customization](#customization)
-- [Compatibility](#compatibility)
+- [Compatibility](#browser-compatibility)
 - [Installation](#installation)
+- [Technical details](#technical-details)
+- [Customization](#Customization)
 - [Author](#author)
 - [Project](#project)
 - [Credits](#credits)
@@ -18,15 +22,7 @@ I like to open a custom locally stored homepage when opening new browser tabs, i
 
 Even with caching, this should be snappier than loading a remote page as your New Tab, and is more customizeable than the default Chrome/Brave browser New Tab page.
 
-Build your own page!
-
-## Customization
-
-Edit the content of `custom-tab.html` to your liking.
-
-Styles are in `css/style.css`
-
-## Compatibility
+## Browser compatibility
 
 Should work on recent versions of Chrome & Brave Browsers.
 
@@ -36,9 +32,28 @@ Should work on recent versions of Chrome & Brave Browsers.
 2. Click the "Load unpacked extension" button
 3. Navigate to your folder and click select
 
-## Screenshots
+## Technical details
 
-![](img/screenshot.png)
+Uses:
+
+- Node 16
+- TailwindCSS
+
+## Customization
+
+Build your own! You can customize the new new tab page to your liking.
+
+Requirements:
+
+- Node 16+
+
+Steps:
+
+1. Install: `npm install`
+2. Start the styles builder: `./build.sh`
+3. Modify the page: edit the content of `/src/index.html.
+
+Styles are built to `/src/css/style.css`
 
 ## Author
 
