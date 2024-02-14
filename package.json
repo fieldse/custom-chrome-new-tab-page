@@ -1,0 +1,27 @@
+{
+  "name": "custom-tab-extension",
+  "version": "1.0.0",
+  "description": "Custom new tab homepage for Chrome / Brave browsers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fieldse/custom-chrome-new-tab-page.git"
+  },
+  "keywords": [
+    "chrome",
+    "browser-extensions",
+    "brave",
+    "tab",
+    "new-tab",
+    "homepage"
+  ],
+  "author": "matt@mattfields.dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fieldse/custom-chrome-new-tab-page/issues"
+  },
+  "homepage": "https://github.com/fieldse/custom-chrome-new-tab-page#readme"
+}
