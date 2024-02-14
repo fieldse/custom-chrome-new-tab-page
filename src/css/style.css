@@ -590,12 +590,20 @@ video {
   height: 2rem;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
 
 .min-h-svh {
   min-height: 100svh;
+}
+
+.min-h-dvh {
+  min-height: 100dvh;
 }
 
 .w-1\/3 {
@@ -610,8 +618,28 @@ video {
   min-width: 4rem;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .rounded-md {
