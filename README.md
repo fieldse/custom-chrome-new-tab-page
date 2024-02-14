@@ -12,7 +12,7 @@ A browser extension for Chrome that allows opening a custom HTML file as your ne
 - [Installation](#installation)
 - [Technical details](#technical-details)
 - [Customization](#Customization)
-- [Author](#author)
+- [Maintainer](#maintainer)
 - [Project](#project)
 - [Credits](#credits)
 
@@ -41,7 +41,7 @@ Uses:
 
 ## Customization
 
-Build your own! You can customize the new new tab page to your liking.
+Build your own! You can customize the new new tab page or build your own from scratch.
 
 Requirements:
 
@@ -51,13 +51,15 @@ Steps:
 
 1. Install: `npm install`
 2. Start the styles builder: `./build.sh`
-3. Modify the page: edit the content of `/src/index.html.
+3. Modify the page: edit the contents of `/src/index.html` to your liking.
 
 Styles are built to `/src/css/style.css`
 
-## Author
+## Maintainer
 
-- Matt Fields - hello@mattfields.dev
+👋🏻 Matt Fields - hello@mattfields.dev
+
+🚀 Hire me! I'm available for work.
 
 ## Project
 
@@ -65,4 +67,4 @@ Styles are built to `/src/css/style.css`
 
 ## Credits
 
-Credit for this solution to [this answer](https://superuser.com/a/909595) at Stack Exchange
+- Credit for inspiration for this project to [this answer](https://superuser.com/a/909595) at Stack Exchange
