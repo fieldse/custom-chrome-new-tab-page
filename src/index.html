@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' 'wasm-unsafe-eval' 'inline-speculation-rules';"
+      content="script-src 'self' 'nonce-272618dj457' 'unsafe-inline';"
     />
     <script src="js/search.js"></script>
     <title>New Tab Homepage</title>
@@ -14,7 +14,9 @@
   <body class="bg-white font-mono">
     <div class="flex flex-col min-h-screen min-h-svh">
       <!-- title -->
-      <h1 class="text-3xl font-mono px-4">Welcome to your example homepage!</h1>
+      <h1 class="text-3xl font-mono px-4 text-center">
+        Welcome to your example homepage!
+      </h1>
 
       <!-- search form -->
       <div class="text-center">
@@ -30,7 +32,7 @@
           <button
             id="search-btn"
             type="submit"
-            class="border border-gray-600 bg-gray-400 text-white rounded-md text-small h-8 px-2 min-w-16"
+            class="rounded-md bg-orange-500 text-white px-3 py-1 h-8 min-w-16"
           >
             Go
           </button>
@@ -77,8 +79,8 @@
         >
       </footer>
     </div>
-    <script type="text/javascript">
-      window.addEventListener("load", () => addListeners());
+    <script nonce="272618dj457">
+      console.log("this is an inline script;");
     </script>
   </body>
 </html>
