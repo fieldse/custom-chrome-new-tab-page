@@ -4,14 +4,8 @@
   "version": "0.1",
   "incognito": "split",
   "chrome_url_overrides": {
-    "newtab": "custom-tab.html"
+    "newtab": "src/index.html"
   },
-  "content_scripts": [
-    {
-      "matches": ["https://cdn.tailwindcss.com/*"],
-      "css": ["css/style.css"],
-      "js": ["js/search.js"]
-    }
-  ],
+  "content_scripts": [],
   "manifest_version": 3
 }
