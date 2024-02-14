@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' 'wasm-unsafe-eval' 'inline-speculation-rules';"
+    />
     <script src="js/search.js"></script>
     <title>New Tab Homepage</title>
   </head>
@@ -76,6 +80,5 @@
     <script type="text/javascript">
       window.addEventListener("load", () => addListeners());
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
   </body>
 </html>
