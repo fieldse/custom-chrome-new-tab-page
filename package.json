@@ -4,7 +4,7 @@
   "description": "Custom new tab homepage for Chrome / Brave browsers",
   "main": "index.js",
   "scripts": {
-    "build": "source .env; echo \"building to ${CSS_BUILD_DIR}...\";npx tailwindcss -i ./src/css/main.css -o ${CSS_BUILD_DIR}/style.css",
+    "build": "source .env; webpack",
     "build:watch": "source .env;echo \"building to ${CSS_BUILD_DIR}. Watching for changes... Ctrl+C to exit\"; npx tailwindcss -i ./src/css/main.css -o ${CSS_BUILD_DIR}/style.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/fieldse/custom-chrome-new-tab-page#readme",
   "devDependencies": {
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "webpack": "^5.90.1"
   }
 }
