@@ -4,6 +4,8 @@
   "description": "Custom new tab homepage for Chrome / Brave browsers",
   "main": "index.js",
   "scripts": {
+    "build": "./build.sh",
+    "build:watch": "./build.sh --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

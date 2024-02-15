@@ -1,10 +1,10 @@
 {
   "name": "Custom new tab page",
   "description": "Overrides the new tab page. See project page for details: https://github.com/fieldse/chrome-extension-new-tab-homepage",
-  "version": "0.1",
+  "version": "0.2.0",
   "incognito": "split",
   "chrome_url_overrides": {
-    "newtab": "src/index.html"
+    "newtab": "../dist/index.html"
   },
   "content_scripts": [],
   "manifest_version": 3

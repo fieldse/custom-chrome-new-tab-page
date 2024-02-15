@@ -1,30 +1,41 @@
 #!/bin/bash
 # Builds style.css with Tailwind
+ARGS=($@)
 
 set -e
+source .env
+source ./script/util.sh
 
-# Builds styles to this location
-CSS_OUTFILE="src/css/style.css"
+CSS_OUTFILE="${CSS_BUILD_DIR}/style.css"
 
 # Confirm required commands exist
-# credit: https://www.andreinc.net/2011/09/04/bash-scripting-best-practice
 function sanityChecks() {
-  declare -r T_CMDS="npx"
-  for t_cmd in $T_CMDS; do
-    type -P ${t_cmd} >>/dev/null
-    if [ ! $? ]; then
-      echo -e "${t_cmd} not installed! exiting"
-      exit 1
-    fi
-  done
+  executableExists "npx"
+  fileExists .env
+  fileExists ./src/index.html
+  notEmpty "${CSS_BUILD_DIR}"
+  fileExists "${CSS_OUTFILE}"
 }
 
-# Build the css styles to /css/style.css
+# Run sanity checks and build
 function build() {
-  echo -e "\nBuilding CSS to -> ${CSS_OUTFILE}. Watching for changes... Ctrl+C to exit"
-  npx tailwindcss -i ./src/css/main.css -o ${CSS_OUTFILE} --watch
+  # Copy the HTML stuff
+  cp -f ./src/index.html "${HTML_BUILD_DIR}/"
+
+  # Copy the JS stuff
+  mkdir -p "${JS_BUILD_DIR}"
+  cp -rf ./src/js/* "${JS_BUILD_DIR}/"
+
+  # Build the CSS to /css/style.css
+  echo -e "\nBuilding CSS to -> ${CSS_OUTFILE}"
+  sanityChecks
+
+  # Hacky way to check for --watch flag
+  if [ "${ARGS[0]}" == '--watch' ]; then
+    echo "Watching for changes... Ctrl+C to exit"
+  fi
+  npx tailwindcss -i ./src/css/main.css -o ${CSS_OUTFILE} ${ARGS[@]}
 }
 
 # Run
-sanityChecks
 build

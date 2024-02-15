@@ -2,7 +2,7 @@
 
 A browser extension for Chrome that allows opening a custom HTML file as your new tab / startup page.
 
-![](img/screenshot.png)
+![](static/img/screenshot.png)
 
 ## Contents
 
@@ -50,7 +50,7 @@ Requirements:
 Steps:
 
 1. Install: `npm install`
-2. Start the styles builder: `./build.sh`
+2. Start the styles builder: `npm run build:watch`
 3. Modify the page: edit the contents of `/src/index.html` to your liking.
 
 Styles are built to `/src/css/style.css`
