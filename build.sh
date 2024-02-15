@@ -20,7 +20,11 @@ function sanityChecks() {
 # Run sanity checks and build
 function build() {
   # Copy the HTML stuff
-  cp -f ./src/index.html ./dist/index.html
+  cp -f ./src/index.html "${HTML_BUILD_DIR}/"
+
+  # Copy the JS stuff
+  mkdir -p "${JS_BUILD_DIR}"
+  cp -rf ./src/js/* "${JS_BUILD_DIR}/"
 
   # Build the CSS to /css/style.css
   echo -e "\nBuilding CSS to -> ${CSS_OUTFILE}"
