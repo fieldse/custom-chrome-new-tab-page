@@ -28,7 +28,7 @@ Should work on recent versions of Chrome & Brave Browsers.
 
 ## Installation
 
-1. Open `chrome://extensions` in your browswer, and click the Developer mode checkbox on the top right.
+1. Open `chrome://extensions` in your browser, and click the Developer mode checkbox on the top right.
 2. Click the "Load unpacked extension" button
 3. Navigate to your folder and click select
 
