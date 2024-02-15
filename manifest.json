@@ -6,6 +6,13 @@
   "chrome_url_overrides": {
     "newtab": "../dist/index.html"
   },
+  "icons": {
+    "16": "./static/icons/new-tab-16.png",
+    "32": "./static/icons/new-tab-32.png",
+    "48": "./static/icons/new-tab-48.png",
+    "64": "./static/icons/new-tab-64.png",
+    "128": "./static/icons/new-tab-128.png"
+  },
   "content_scripts": [],
   "manifest_version": 3
 }
