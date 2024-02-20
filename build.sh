@@ -20,19 +20,21 @@ function sanityChecks() {
 # Run sanity checks and build
 function build() {
   # Copy the HTML stuff
+  echo "[+] copying index.html -> ${HTML_BUILD_DIR}"
   cp -f ./src/index.html "${HTML_BUILD_DIR}/"
 
   # Copy the JS stuff
+  echo "[+] copying /src/cs -> ${JS_BUILD_DIR}"
   mkdir -p "${JS_BUILD_DIR}"
   cp -rf ./src/js/* "${JS_BUILD_DIR}/"
 
   # Build the CSS to /css/style.css
-  echo -e "\nBuilding CSS to -> ${CSS_OUTFILE}"
+  echo "[+] building CSS to -> ${CSS_OUTFILE}"
   sanityChecks
 
   # Hacky way to check for --watch flag
   if [ "${ARGS[0]}" == '--watch' ]; then
-    echo "Watching for changes... Ctrl+C to exit"
+    echo "[+] watching for changes... Ctrl+C to exit"
   fi
   npx tailwindcss -i ./src/css/main.css -o ${CSS_OUTFILE} ${ARGS[@]}
 }
