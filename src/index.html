@@ -18,6 +18,12 @@
         Welcome to your example homepage!
       </h1>
 
+      <div class="text-center my-16">
+        <label for="titleInput">Set page title</label>
+        <input type="text" name="titleInput" id="titleInput" />
+        <button type="button" id="logTitleButton">Log value</button>
+      </div>
+
       <!-- search form -->
       <div class="text-center">
         <form id="search-form" name="search-form">
@@ -74,9 +80,7 @@
         </ul>
       </div>
 
-      <footer
-        class="absolute bg-gray-300 bottom-0 h-14 text-center w-full flex flex-col justify-centerd"
-      >
+      <footer>
         <span class="text-center text-small text-gray-400"
           >project:
           <a href="https://github.com/fieldse/custom-chrome-new-tab-page"
@@ -85,5 +89,6 @@
         >
       </footer>
     </div>
+    <script src="./js/options-storage.js"></script>
   </body>
 </html>
