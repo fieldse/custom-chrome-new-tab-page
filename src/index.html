@@ -76,8 +76,6 @@
 
       <!-- Edit title form -->
       <div class="text-center my-16">
-        <!-- toggle the title form visibility  -->
-        <button id="btn-toggle-editor">Edit title</button>
         <div id="title-editor-form" class="hidden">
           <label for="titleInput">Set page title</label>
           <input
@@ -96,13 +94,14 @@
         </div>
       </div>
 
-      <footer>
-        <span class="text-center text-small text-gray-400"
-          >project:
-          <a href="https://github.com/fieldse/custom-chrome-new-tab-page"
-            >https://github.com/fieldse/custom-chrome-new-tab-page</a
-          ></span
-        >
+      <footer class="h-12 text-white text-small bg-gray-400 justify-between">
+        <span class="text-center">
+          project:
+          <a href="https://github.com/fieldse/custom-chrome-new-tab-page">
+            https://github.com/fieldse/custom-chrome-new-tab-page
+          </a>
+        </span>
+        <button id="btn-toggle-editor">Edit title</button>
       </footer>
     </div>
     <script src="./js/options-storage.js"></script>
