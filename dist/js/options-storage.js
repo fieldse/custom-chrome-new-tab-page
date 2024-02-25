@@ -4,19 +4,16 @@
 function setAndStoreTitle() {
   const title = document.getElementById("titleInput").value;
 
-  if (!title) {
-    console.log("title empty");
-    return;
+  if (!!title) {
+    // Store to local storage
+    localStorage.setItem("title", title);
+
+    // Replace the title on the page
+    replacePageTitle(title);
   }
 
-  // Store to local storage
-  storeTitle(title);
-
-  // Replace the title on the page
-  replacePageTitle(title);
-
   // Hide the editor form
-  hideForm();
+  document.getElementById("title-editor-form")?.classList.add("hidden");
 }
 
 // Replace the main title of the page
@@ -24,15 +21,8 @@ const replacePageTitle = (title) => {
   document.getElementById("page-title").innerHTML = title;
 };
 
-// Store title to localstorage
-const storeTitle = (title) => localStorage.setItem("title", title);
-
 // get the homepage title from local storage
 const getTitle = () => localStorage.getItem("title") || "";
-
-// Hide the title editor form
-const hideForm = () =>
-  document.getElementById("title-editor-form")?.classList.add("hidden");
 
 // toggle visibility of the title editor form
 function toggleFormVisible() {

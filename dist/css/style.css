@@ -578,6 +578,10 @@ video {
   }
 }
 
+.m-0 {
+  margin: 0px;
+}
+
 .my-12 {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -655,10 +659,6 @@ video {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.justify-evenly {
-  justify-content: space-evenly;
 }
 
 .rounded-md {
