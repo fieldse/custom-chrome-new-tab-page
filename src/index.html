@@ -12,7 +12,10 @@
     <title>New Tab Homepage</title>
   </head>
   <body class="bg-white font-mono">
-    <div class="flex flex-col justify-between justify-evenly h-screen">
+    <div
+      id="container"
+      class="flex flex-col justify-between justify-evenly h-screen p-0"
+    >
       <!-- title -->
       <h1 id="page-title" class="text-3xl font-mono px-4 text-center mt-16">
         Welcome to your example homepage!
@@ -94,9 +97,10 @@
         </div>
       </div>
 
-      <footer class="h-12 text-white text-small bg-gray-400 justify-between">
-        <span class="text-center">
-          project:
+      <footer
+        class="flex h-12 text-white text-small bg-gray-400 justify-between items-center px-4"
+      >
+        <span id="footer-text" class="flex-1">
           <a href="https://github.com/fieldse/custom-chrome-new-tab-page">
             https://github.com/fieldse/custom-chrome-new-tab-page
           </a>
