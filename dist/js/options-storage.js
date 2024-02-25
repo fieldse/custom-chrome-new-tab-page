@@ -36,7 +36,14 @@ const hideForm = () =>
 
 // toggle visibility of the title editor form
 function toggleFormVisible() {
-  document.getElementById("title-editor-form")?.classList.toggle("hidden");
+  const editorDiv = document.getElementById("title-editor-form");
+  if (editorDiv.classList.contains("hidden")) {
+    // Show and select the form content
+    editorDiv.classList.remove("hidden");
+    document.getElementById("titleInput").select();
+  } else {
+    editorDiv.classList.add("hidden"); // hide
+  }
 }
 
 // Set the input form text
