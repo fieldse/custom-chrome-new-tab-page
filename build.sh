@@ -28,7 +28,7 @@ function build() {
 
   # Copy all the static source files
   echo "[+] copying static files"
-  cp -rf ./src "${BUILD_DIR}/"
+  cp -rf ./src/* "${BUILD_DIR}"
 
   # Build the CSS to /css/style.css
   echo "[+] building CSS to -> ${CSS_OUTFILE}"
@@ -38,7 +38,7 @@ function build() {
   if [ "${ARGS[0]}" == '--watch' ]; then
     echo "[+] watching for changes... Ctrl+C to exit"
   fi
-  npx tailwindcss -i ./src/css/main.css -o ${CSS_OUTFILE} ${ARGS[@]}
+  # npx tailwindcss -i ./src/css/main.css -o ${CSS_OUTFILE} ${ARGS[@]}
 }
 
 # Run
