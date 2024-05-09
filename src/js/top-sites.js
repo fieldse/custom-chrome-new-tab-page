@@ -63,6 +63,55 @@ function cleanUrl(url) {
 const topSiteEl = (url) =>
   `<li class="my-3"><a class="py-1 px-2" href="${url}">${url}</a></li>`;
 
+// Generate a pair of edit buttons to update/delete a top site item
+const editButtons = (url) => {
+  const span = document.createElement('span');
+
+  // Save button
+  const btnSave = document.createElement('button');
+  btnSave.textContent = 'Save';
+  btnSave.addEventListener('click', () => {
+    console.log(`placeholder: save top site: ${url}`);
+  });
+
+  // Delete button
+  const btnDelete = document.createElement('button');
+  btnDelete.textContent = 'Delete';
+  btnDelete.addEventListener('click', () => {
+    console.log(`placeholder: delete top site: ${url}`);
+  });
+
+  span.append(btnSave, btnDelete);
+  return span;
+};
+
+// Generate an edit form item for a single top-site row
+const editSiteRow = (url) => {
+  const span = document.createElement('span');
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.value = url;
+  const buttons = editButtons();
+  span.append(input, buttons);
+  return span;
+};
+
+// Generate rows for the edit top sites form
+function generateEditForm() {
+  console.log('== debug: generating edit site form rows');
+
+  // Get the sites list from storage
+  const urls = getTopSites();
+
+  // Generate edit buttons and form items
+  const rows = urls.map((url) => editSiteRow(url));
+
+  // Find the root form and add the edit form
+  const el = document.getElementById('form-edit-top-sites');
+  console.log(`== debug: found form element: ${el}`);
+  el.replaceChildren(rows);
+}
+
 // Append a new list item element to the top sites list
 function insertTopSiteItem(url) {
   addTopSite(url);
@@ -77,5 +126,36 @@ function populateTopSitesList() {
   ul.innerHTML = items.join('');
 }
 
-// Populate the top-sites list on page load
-populateTopSitesList();
+// Toggle visibility of edit top-sites form
+function toggleTopSitesEditForm() {
+  const form = document.getElementById('form-edit-top-sites');
+  const btn = document.getElementById('btn-toggle-edit-top-sites');
+
+  // Toggle visibility of edit form and populate it
+  if (form.classList.contains('hidden')) {
+    form.classList.remove('hidden');
+    generateEditForm();
+    btn.innerHTML = 'done';
+  } else {
+    form.classList.add('hidden');
+    form.replaceChildren();
+    btn.innerHTML = 'edit';
+  }
+}
+
+// Add onclick function for buttons
+function addButtonListeners() {
+  document
+    .querySelector('#btn-toggle-edit-top-sites')
+    .addEventListener('submit', (event) => {
+      event.preventDefault();
+      toggleTopSitesEditForm();
+    });
+}
+// Populate the top-sites list and add button listeners on page load
+function onload() {
+  populateTopSitesList();
+  addButtonListeners();
+}
+
+onload();

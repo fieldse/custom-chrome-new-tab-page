@@ -46,10 +46,22 @@
         </span>
 
         <div class="max-w-4xl mx-auto">
+          <!-- Top sites list -->
           <ul
             id="top-sites"
             class="text-blue-300 flex flex-row flex-wrap justify-center"
           ></ul>
+
+          <div id="form-edit-top-sites" class="hidden"></div>
+
+          <!-- Toggle edit top sites button -->
+          <button
+            type="button"
+            id="btn-toggle-edit-top-sites"
+            class="rounded-md bg-orange-500 text-white px-3 py-1 h-8 min-w-16"
+          >
+            Edit
+          </button>
         </div>
       </div>
 
@@ -81,9 +93,11 @@
             https://github.com/fieldse/custom-chrome-new-tab-page
           </a>
         </span>
-        <span>
-          <button id="btn-toggle-editor">Edit title</button>
-          <img src="img/edit-icon.svg" alt="edit icon" />
+        <span class="flex items-center">
+          <button id="btn-toggle-edit-title">Edit title</button>
+          <span class="w-4 h-4 ml-2">
+            <img src="img/edit-icon.svg" alt="edit icon" />
+          </span>
         </span>
       </footer>
     </div>
