@@ -31,14 +31,14 @@ function build() {
   cp -rf ./src/* "${BUILD_DIR}"
 
   # Build the CSS to /css/style.css
-  echo "[+] building CSS to -> ${CSS_OUTFILE}"
+  echo "[+] building CSS to ${CSS_OUTFILE}"
 
   # Hacky way to check for --watch flag
   # TOOD -- add proper command-line flags
   if [ "${ARGS[0]}" == '--watch' ]; then
     echo "[+] watching for changes... Ctrl+C to exit"
   fi
-  # npx tailwindcss -i ./src/css/main.css -o ${CSS_OUTFILE} ${ARGS[@]}
+  npx tailwindcss -i ./src/css/main.css -o ${CSS_OUTFILE} ${ARGS[@]}
 }
 
 # Run

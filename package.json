@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "./build.sh",
+    "clean": "echo '[+] cleaning /dist directory'; rm -rf ./dist/* ; echo '[+] done';",
     "build:watch": "./build.sh --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
