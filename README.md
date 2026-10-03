@@ -68,3 +68,4 @@ Styles are built to `/src/css/style.css`
 ## Credits
 
 - Credit for inspiration for this project to [this answer](https://superuser.com/a/909595) at Stack Exchange
+- Edit icon by [Icons8](https://icons8.com/icon/sKp0dy2A108d/edit)

@@ -1,5 +1,8 @@
 .git/
 
+# Generated dist files
+dist/
+
 # MacOS
 **/.DS_Store
 

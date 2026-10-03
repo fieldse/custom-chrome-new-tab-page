@@ -45,33 +45,24 @@
           <p>My top links:</p>
         </span>
 
-        <ul class="ml-4 text-blue-300 flex flex-row justify-center">
-          <li class="my-3">
-            <a class="py-1 px-2" href="https://duckduckgo.com">DuckDuckGo</a>
-          </li>
-          <li class="my-3">
-            <a class="py-1 px-2" href="https://www.hackthebox.com/"
-              >HackTheBox</a
-            >
-          </li>
-          <li class="my-3">
-            <a class="py-1 px-2" href="https://github.com">Github</a>
-          </li>
-          <li class="my-3">
-            <a class="py-1 px-2" href="https://en.wikipedia.org">Wikipedia</a>
-          </li>
-          <li class="my-3">
-            <a class="py-1 px-2" href="https://nytimes.com">New York Times</a>
-          </li>
-          <li class="my-3">
-            <a class="py-1 px-2" href="https://news.ycombinator.com"
-              >Hacker News</a
-            >
-          </li>
-          <li class="my-3">
-            <a class="py-1 px-2" href="https://unsplash.com">Unsplash</a>
-          </li>
-        </ul>
+        <div class="max-w-4xl mx-auto">
+          <!-- Top sites list -->
+          <ul
+            id="top-sites"
+            class="text-blue-300 flex flex-row flex-wrap justify-center"
+          ></ul>
+
+          <div id="form-edit-top-sites" class="hidden"></div>
+
+          <!-- Toggle edit top sites button -->
+          <button
+            type="button"
+            id="btn-toggle-edit-top-sites"
+            class="rounded-md bg-orange-500 text-white px-3 py-1 h-8 min-w-16"
+          >
+            Edit
+          </button>
+        </div>
       </div>
 
       <!-- Edit title form -->
@@ -102,9 +93,15 @@
             https://github.com/fieldse/custom-chrome-new-tab-page
           </a>
         </span>
-        <button id="btn-toggle-editor">Edit title</button>
+        <span class="flex items-center">
+          <button id="btn-toggle-edit-title">Edit title</button>
+          <span class="w-4 h-4 ml-2">
+            <img src="img/edit-icon.svg" alt="edit icon" />
+          </span>
+        </span>
       </footer>
     </div>
     <script src="./js/options-storage.js"></script>
+    <script src="./js/top-sites.js"></script>
   </body>
 </html>
